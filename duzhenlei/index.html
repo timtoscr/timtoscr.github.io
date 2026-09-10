@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毒针雷萨恩-毒针雷萨恩背景设定与角色深度解析</title>
+    <meta name="description" content="毒针雷萨恩是暗影界最令人闻风丧胆的刺客之一，本页深度解析其背景故事、毒针武器设定、性格特点与经典语录，带你走进这位传奇杀手的暗杀世界。">
+    <meta name="keywords" content="毒针雷萨恩,雷萨恩,毒针刺客,暗影杀手,毒针武器,角色解析,暗杀者,毒药专家">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+            background: #0e0e12;
+            color: #d9d9d9;
+            line-height: 1.7;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== Header ===== */
+        .site-header {
+            background: linear-gradient(135deg, #1a1a1f 0%, #23232b 100%);
+            border-bottom: 1px solid #3a3a44;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(4px);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #5b8c5a, #1f3a1f);
+            border: 2px solid #7fb07a;
+            position: relative;
+        }
+        .logo-icon::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 4px;
+            height: 4px;
+            background: #b8e0b0;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 12px #7fb07a;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #e6e6ea;
+            text-shadow: 0 0 12px rgba(127, 176, 122, 0.3);
+        }
+        .logo-text span {
+            color: #7fb07a;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+        .main-nav a {
+            font-size: 0.95rem;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+            color: #b9b9c0;
+        }
+        .main-nav a:hover {
+            color: #a4d19f;
+            border-bottom-color: #7fb07a;
+        }
+        .header-btn {
+            background: #2e4030;
+            color: #cde8c8;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            border: 1px solid #4a6b4a;
+            transition: 0.2s;
+        }
+        .header-btn:hover {
+            background: #3a523c;
+            border-color: #7fb07a;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            background: linear-gradient(180deg, #141419 0%, #0e0e12 100%);
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -100px;
+            right: -60px;
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(127, 176, 122, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -120px;
+            left: -80px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(90, 120, 90, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: rgba(127, 176, 122, 0.15);
+            color: #a4d19f;
+            border: 1px solid rgba(127, 176, 122, 0.4);
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .hero-text h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #f0f0f2;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .hero-text h1 .accent {
+            color: #8bc484;
+            text-shadow: 0 0 20px rgba(127, 176, 122, 0.3);
+        }
+        .hero-desc {
+            font-size: 1.1rem;
+            color: #9a9aa5;
+            margin-bottom: 30px;
+            max-width: 560px;
+        }
+        .hero-badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: #1c1c22;
+            border: 1px solid #35353e;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #b8b8c0;
+        }
+        .badge i {
+            color: #7fb07a;
+            margin-right: 6px;
+        }
+        .hero-visual {
+            flex: 0 0 320px;
+            height: 340px;
+            background: linear-gradient(145deg, #1c2022, #15171a);
+            border-radius: 20px;
+            border: 1px solid #2c2c35;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .hero-visual .needle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #4a6b4a, #1f2e1f);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .needle::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 120px;
+            background: linear-gradient(180deg, #a5c8a0, #4a6b4a);
+            border-radius: 4px;
+            transform: rotate(45deg);
+            box-shadow: 0 0 15px rgba(127, 176, 122, 0.4);
+        }
+        .needle::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 120px;
+            background: linear-gradient(180deg, #a5c8a0, #4a6b4a);
+            border-radius: 4px;
+            transform: rotate(-45deg);
+            box-shadow: 0 0 15px rgba(127, 176, 122, 0.4);
+        }
+        .visual-caption {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.8rem;
+            color: #6b6b76;
+            letter-spacing: 2px;
+        }
+
+        /* ===== Section general ===== */
+        .section {
+            padding: 70px 0;
+        }
+        .section-label {
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            color: #7fb07a;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e8e8ec;
+            margin-bottom: 15px;
+        }
+        .section-sub {
+            color: #8f8f9a;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #7fb07a, transparent);
+            margin-bottom: 30px;
+        }
+
+        /* ===== Profile intro ===== */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .profile-text p {
+            margin-bottom: 18px;
+            color: #b0b0b8;
+        }
+        .profile-text strong {
+            color: #cde8c8;
+        }
+        .profile-card {
+            background: #16161c;
+            border: 1px solid #2a2a33;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .profile-card h3 {
+            color: #a4d19f;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #24242c;
+            font-size: 0.9rem;
+        }
+        .info-row .label {
+            color: #7a7a85;
+        }
+        .info-row .value {
+            color: #c5c5cd;
+        }
+
+        /* ===== Weapon section ===== */
+        .weapon-section {
+            background: #111116;
+            border-top: 1px solid #25252d;
+            border-bottom: 1px solid #25252d;
+        }
+        .weapon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .weapon-card {
+            background: #17171d;
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid #26262e;
+            transition: 0.3s;
+        }
+        .weapon-card:hover {
+            border-color: #4a6b4a;
+            transform: translateY(-4px);
+        }
+        .weapon-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: #1f2a1f;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #3a4a3a;
+        }
+        .weapon-card h3 {
+            color: #cde8c8;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        .weapon-card p {
+            color: #9a9aa5;
+            font-size: 0.9rem;
+        }
+
+        /* ===== Quotes ===== */
+        .quotes-section {
+            background: linear-gradient(135deg, #131318, #181820);
+        }
+        .quote-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .quote-block {
+            background: #1a1a21;
+            border-left: 3px solid #7fb07a;
+            padding: 25px 30px;
+            border-radius: 0 12px 12px 0;
+            position: relative;
+        }
+        .quote-block::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: -3px;
+            width: 3px;
+            height: 40px;
+            background: #7fb07a;
+        }
+        .quote-text {
+            font-size: 1.1rem;
+            color: #d0d0d8;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        .quote-source {
+            color: #7a7a85;
+            font-size: 0.85rem;
+            text-align: right;
+        }
+
+        /* ===== Timeline ===== */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 30px;
+        }
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #2a2a33;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 20px;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -27px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: #1a1a21;
+            border: 2px solid #7fb07a;
+            border-radius: 50%;
+        }
+        .timeline-year {
+            font-size: 0.8rem;
+            color: #7fb07a;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .timeline-title {
+            color: #d0d0d8;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .timeline-desc {
+            color: #8f8f9a;
+            font-size: 0.9rem;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #16161c;
+            border: 1px solid #25252d;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            padding: 20px 25px;
+        }
+        .faq-question {
+            color: #cde8c8;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .faq-question::before {
+            content: "Q";
+            background: #2e4030;
+            color: #a4d19f;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .faq-answer {
+            color: #9a9aa5;
+            font-size: 0.9rem;
+            padding-left: 34px;
+        }
+
+        /* ===== CTA ===== */
+        .cta-box {
+            background: linear-gradient(135deg, #1d2a1d, #162016);
+            border: 1px solid #3a4a3a;
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            margin: 40px 0 80px;
+        }
+        .cta-box h2 {
+            color: #e0e8e0;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .cta-box p {
+            color: #9ab894;
+            margin-bottom: 25px;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: #7fb07a;
+            color: #0e0e12 !important;
+            padding: 12px 36px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .cta-btn:hover {
+            background: #a4d19f;
+            transform: scale(1.02);
+        }
+
+        /* ===== Footer ===== */
+        .site-footer {
+            background: #0a0a0e;
+            border-top: 1px solid #1e1e24;
+            padding: 50px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand .logo-text {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        .footer-desc {
+            color: #6a6a75;
+            font-size: 0.85rem;
+        }
+        .footer-links h4 {
+            color: #b0b0b8;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+        .footer-links a {
+            color: #7a7a85;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+        .footer-links a:hover {
+            color: #a4d19f;
+        }
+        .copyright {
+            text-align: center;
+            color: #55555e;
+            font-size: 0.8rem;
+            padding-top: 20px;
+            border-top: 1px solid #1a1a20;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero-visual {
+                margin: 0 auto;
+            }
+            .hero-badges {
+                justify-content: center;
+            }
+            .hero-desc {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+            .weapon-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .quote-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 640px) {
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .main-nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .hero-visual {
+                flex-basis: auto;
+                width: 100%;
+                max-width: 320px;
+                height: 260px;
+            }
+            .weapon-grid {
+                grid-template-columns: 1fr;
+            }
+            .section {
+                padding: 50px 0;
+            }
+            .cta-box {
+                padding: 30px 20px;
+            }
+            .cta-box h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <div class="logo-text">毒针<span>雷萨恩</span></div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#profile">角色档案</a></li>
+                <li><a href="#weapon">毒针武器</a></li>
+                <li><a href="#quotes">经典语录</a></li>
+                <li><a href="#timeline">生平轨迹</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+        <a href="#cta" class="header-btn">加入暗影</a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-tag">暗影系 · 刺客列传</span>
+                <h1>毒针<span class="accent">雷萨恩</span></h1>
+                <p class="hero-desc">他是夜幕下的无声处决者，是毒药与银针的完美结合。在暗影世界的传说中，雷萨恩的名字本身便是一种警告——当他的毒针出鞘，目标已然无路可逃。</p>
+                <div class="hero-badges">
+                    <span class="badge"><i>✦</i> 刺客等级：S</span>
+                    <span class="badge"><i>✦</i> 阵营：暗影议会</span>
+                    <span class="badge"><i>✦</i> 武器：淬毒银针</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="needle"></div>
+                <div class="visual-caption">「毒针 · 雷萨恩」</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile -->
+    <section class="section" id="profile">
+        <div class="container">
+            <div class="section-label">Character Profile</div>
+            <h2 class="section-title">角色档案</h2>
+            <div class="divider"></div>
+            <div class="profile-grid">
+                <div class="profile-text">
+                    <p><strong>毒针雷萨恩</strong>，出自暗黑奇幻世界观《永夜编年史》的核心刺客角色。他并非出身名门望族，而是从底层暗巷中一步步爬上来的实战型杀手。雷萨恩的成名技是“瞬影毒针”——一种融合了暗影步法与剧毒淬炼的致命技艺。</p>
+                    <p>与那些依靠蛮力的战士不同，雷萨恩信奉精准与效率。他的每一次出手都经过精密计算，从不浪费多余动作。在暗影议会中，雷萨恩被称作“清道夫”，专门负责处理那些令其他刺客棘手的“硬骨头”。</p>
+                    <p>雷萨恩的性格极其内敛，沉默寡言，但观察力惊人。他相信毒针不是杀戮的工具，而是“平衡”的艺术——用最小的代价换取最大的结果。这种哲学让他在刺客圈子里既受敬畏，又显得格格不入。</p>
+                </div>
+                <div class="profile-card">
+                    <h3>基础信息</h3>
+                    <div class="info-row"><span class="label">真名</span><span class="value">雷萨恩·影刃</span></div>
+                    <div class="info-row"><span class="label">称号</span><span class="value">毒针</span></div>
+                    <div class="info-row"><span class="label">身高</span><span class="value">178cm</span></div>
+                    <div class="info-row"><span class="label">体重</span><span class="value">68kg</span></div>
+                    <div class="info-row"><span class="label">武器</span><span class="value">淬毒银针（3支/组）</span></div>
+                    <div class="info-row"><span class="label">毒药偏好</span><span class="value">夜影蛛毒、曼陀罗精粹</span></div>
+                    <div class="info-row"><span class="label">所属</span><span class="value">暗影议会 · 第七席</span></div>
+                    <div class="info-row"><span class="label">初次登场</span><span class="value">《永夜编年史·影之章》</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weapon -->
+    <section class="section weapon-section" id="weapon">
+        <div class="container">
+            <div class="section-label">Arsenal</div>
+            <h2 class="section-title">毒针武器解析</h2>
+            <p class="section-sub">雷萨恩的武器并非寻常铁器，而是经过特殊工艺锻造的银质毒针，配合他自创的投掷手法，能在百步之外精准命中目标。</p>
+            <div class="weapon-grid">
+                <div class="weapon-card">
+                    <div class="weapon-icon">⚗️</div>
+                    <h3>淬毒工艺</h3>
+                    <p>每根银针都经过三重淬炼：先以高温锻打去除杂质，再浸入独家配置的混合毒素中浸泡三日三夜，最后以秘法封存毒性。这种工艺使得毒针在刺入目标后，毒素能够快速扩散且难以被普通解毒剂中和。</p>
+                </div>
+                <div class="weapon-card">
+                    <div class="weapon-icon">🎯</div>
+                    <h3>精准投掷</h3>
+                    <p>雷萨恩的投掷手法独树一帜，他利用手腕的瞬间爆发力与螺旋气流，让毒针在飞行中保持稳定弹道。即使在强风或黑暗环境中，他也能凭借听觉与气流感知锁定目标位置。</p>
+                </div>
+                <div class="weapon-card">
+                    <div class="weapon-icon">🌑</div>
+                    <h3>暗影隐匿</h3>
+                    <p>配合“暗影步法”，雷萨恩可以在投掷毒针的瞬间转移自身位置，让敌人难以判断攻击来源。这种隐匿不仅依赖装备，更源于他多年练就的独特呼吸法与步伐节奏。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes -->
+    <section class="section quotes-section" id="quotes">
+        <div class="container">
+            <div class="section-label">Quotes</div>
+            <h2 class="section-title">经典语录</h2>
+            <div class="divider"></div>
+            <div class="quote-grid">
+                <div class="quote-block">
+                    <p class="quote-text">“毒针从不宣告死亡，它只负责完成结果。”</p>
+                    <div class="quote-source">—— 雷萨恩 · 暗影议会就职演说</div>
+                </div>
+                <div class="quote-block">
+                    <p class="quote-text">“最快的刀不是最锋利的，而是最安静的。”</p>
+                    <div class="quote-source">—— 雷萨恩 · 教导新人刺客</div>
+                </div>
+                <div class="quote-block">
+                    <p class="quote-text">“我从不追求杀戮的快感，我只在意任务的完美。”</p>
+                    <div class="quote-source">—— 雷萨恩 · 任务报告批注</div>
+                </div>
+                <div class="quote-block">
+                    <p class="quote-text">“在影子的世界里，暴露就等于死亡。”</p>
+                    <div class="quote-source">—— 雷萨恩 · 与议会成员的对话</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section" id="timeline">
+        <div class="container">
+            <div class="section-label">Timeline</div>
+            <h2 class="section-title">生平轨迹</h2>
+            <div class="divider"></div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">早年时期</div>
+                    <div class="timeline-title">暗巷中的孤儿</div>
+                    <div class="timeline-desc">雷萨恩出生于黑港城的下水道区，自幼失去双亲。为了生存，他学会了偷窃与潜行，也第一次接触到了毒药——用来毒杀老鼠的廉价毒饵。</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">少年时代</div>
+                    <div class="timeline-title">拜师毒师</div>
+                    <div class="timeline-desc">12岁时，他救下一位被追杀的炼金术士，这位术士成为他的第一位导师。在炼金实验室的五年间，雷萨恩系统学习了毒药学与人体解剖学。</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">成年之后</div>
+                    <div class="timeline-title">加入暗影议会</div>
+                    <div class="timeline-desc">在一次刺杀任务中，雷萨恩的表现引起了暗影议会高层的注意。经过严格考核，他正式成为议会第七席刺客，并获得“毒针”的专属称号。</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">成名之战</div>
+                    <div class="timeline-title">“血色宴会”事件</div>
+                    <div class="timeline-desc">在贵族晚宴上，雷萨恩一人一针，在众目睽睽之下无声无息地解决了十二名目标。此战后，“毒针雷萨恩”之名响彻暗影世界。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" style="background: #111116; border-top: 1px solid #25252d;">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">关于毒针雷萨恩的常见疑问</h2>
+            <div class="divider"></div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">雷萨恩的毒针为什么是银制的？</div>
+                    <div class="faq-answer">银质针体具有极佳的韧性与抗腐蚀性，能够完美承载多种复合毒素而不发生化学反应。此外，银在黑暗中会散发微弱光泽，但经过雷萨恩的秘法处理后可完全消除反光，更适合隐匿作战。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">他的毒药配方是独家所有吗？</div>
+                    <div class="faq-answer">雷萨恩的毒药配方融合了黑港城地下炼金术与传统暗杀毒药学，部分基础配方来自他的导师，但他经过多年改良后形成了自己的独家体系。据说每种毒素的配比都有细微差别，以适应不同任务需求。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">雷萨恩是否有宿敌或对抗者？</div>
+                    <div class="faq-answer">在暗影议会内部，他与另一位刺客“铁刃”格罗姆存在理念分歧。格罗姆崇尚正面强攻，而雷萨恩坚持精准暗杀。两人虽然合作过数次任务，但始终保持着微妙的竞争关系。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何理解雷萨恩的“平衡”哲学？</div>
+                    <div class="faq-answer">雷萨恩认为，真正的刺客不是屠夫，而是秩序的维护者。他通过精确的暗杀来避免更大规模的冲突，用最小的牺牲换取长远稳定。这种哲学使他在某些任务中会选择“警告”而非“处决”。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="container" id="cta">
+        <div class="cta-box">
+            <h2>深入探索暗影世界</h2>
+            <p>加入暗影议会，解锁更多关于毒针雷萨恩的传奇任务与隐藏剧情。</p>
+            <a href="#" class="cta-btn">浏览完整角色档案</a>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-text">毒针<span>雷萨恩</span></div>
+                <p class="footer-desc">一个专注于暗影角色深度解析的专题站，提供最详尽的角色设定、武器考据与世界观延伸阅读。</p>
+            </div>
+            <div class="footer-links">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#profile">角色档案</a></li>
+                    <li><a href="#weapon">武器解析</a></li>
+                    <li><a href="#quotes">经典语录</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>延伸阅读</h4>
+                <ul>
+                    <li><a href="#">永夜编年史 · 世界观</a></li>
+                    <li><a href="#">暗影议会 · 刺客图鉴</a></li>
+                    <li><a href="#">毒药学入门指南</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 毒针雷萨恩专题站 · 本页内容基于《永夜编年史》世界观整理</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+                  </html>
