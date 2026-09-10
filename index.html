@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都区中医院-广州市花都区中医医院官方网站·就诊指南与科室介绍</title>
+    <meta name="description" content="花都区中医院官方信息平台，提供医院简介、科室导航、专家出诊、就诊流程、中医特色疗法及健康科普。致力于为花都区及周边居民提供优质中医药医疗健康服务。">
+    <meta name="keywords" content="花都区中医院,广州花都中医,中医医院,中医科,针灸推拿,治未病,健康体检,就诊指南">
+    <style>
+        /* ===== 基础重置与全局 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            color: #0a6e5c;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #084c3f;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== 顶部条 ===== */
+        .topbar {
+            background: #eef4f1;
+            border-bottom: 1px solid #d9e5e0;
+            font-size: 0.9rem;
+            padding: 8px 0;
+        }
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .topbar-links a {
+            margin-right: 18px;
+            color: #3d5a4f;
+        }
+        .topbar-links a:last-child {
+            margin-right: 0;
+        }
+        .topbar-info {
+            color: #5e7269;
+        }
+
+        /* ===== 页眉区域 ===== */
+        .site-header {
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 40, 30, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(145deg, #1c8a72, #0a5c4a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(12, 90, 70, 0.2);
+            flex-shrink: 0;
+        }
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0a4b3d;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+        .logo-text .sub {
+            font-size: 0.85rem;
+            color: #6a7f76;
+            letter-spacing: 2px;
+            margin-top: 2px;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .search-box {
+            display: flex;
+            background: #f2f6f4;
+            border-radius: 40px;
+            padding: 5px 5px 5px 18px;
+            border: 1px solid #dce8e2;
+        }
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 200px;
+            font-size: 0.9rem;
+            color: #2c3e50;
+        }
+        .search-box button {
+            background: #0a6e5c;
+            border: none;
+            color: #fff;
+            width: 80px;
+            border-radius: 40px;
+            padding: 6px 0;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .search-box button:hover {
+            background: #084c3f;
+        }
+
+        /* ===== 导航栏 ===== */
+        .main-nav {
+            background: #0a6e5c;
+            border-radius: 0;
+        }
+        .main-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+        }
+        .main-nav ul li {
+            position: relative;
+        }
+        .main-nav ul li a {
+            display: block;
+            padding: 14px 24px;
+            color: #e9f3ef;
+            font-weight: 500;
+            font-size: 1rem;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+        .main-nav ul li a:hover,
+        .main-nav ul li.active a {
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            border-bottom-color: #ffd166;
+        }
+
+        /* ===== 主横幅 Hero ===== */
+        .hero {
+            background: linear-gradient(115deg, #e0f0ea 0%, #f7fbfa 70%);
+            padding: 48px 0 60px;
+            border-bottom: 1px solid #d9e7e1;
+        }
+        .hero .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            flex: 1 1 400px;
+        }
+        .hero-text .badge {
+            background: #0a6e5c;
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .hero-text h2 {
+            font-size: 2.4rem;
+            color: #0a3b30;
+            line-height: 1.3;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #3c5c51;
+            max-width: 600px;
+            margin-bottom: 28px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+        .btn-primary {
+            background: #0a6e5c;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(10, 110, 92, 0.25);
+        }
+        .btn-primary:hover {
+            background: #085b4b;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #0a6e5c;
+            color: #0a6e5c;
+        }
+        .btn-outline:hover {
+            background: #0a6e5c;
+            color: #fff;
+        }
+        .hero-image {
+            flex: 1 1 300px;
+            background: #cde3da;
+            border-radius: 24px;
+            padding: 30px;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200"><rect width="400" height="200" fill="%23d8eae2"/><text x="200" y="110" font-family="Arial" font-size="20" fill="%230a6e5c" text-anchor="middle">中医传承 · 守护健康</text></svg>');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 8px 20px rgba(10, 80, 60, 0.1);
+        }
+
+        /* ===== 快捷服务卡片 ===== */
+        .quick-services {
+            padding: 50px 0 30px;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            color: #0a3b30;
+            margin-bottom: 10px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #0a6e5c;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+        .section-desc {
+            color: #5c6f66;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px 18px;
+            text-align: center;
+            box-shadow: 0 2px 14px rgba(0, 40, 30, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 4px solid #0a6e5c;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0, 60, 40, 0.12);
+        }
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            color: #0a6e5c;
+        }
+        .service-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: #123f33;
+        }
+        .service-card p {
+            font-size: 0.9rem;
+            color: #5e6f68;
+        }
+
+        /* ===== 科室与特色 ===== */
+        .dept-section {
+            background: #fff;
+            padding: 50px 0;
+        }
+        .dept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .dept-card {
+            background: #f9fcfa;
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 5px solid #0a6e5c;
+            transition: background 0.2s;
+        }
+        .dept-card:hover {
+            background: #eff7f3;
+        }
+        .dept-card h3 {
+            color: #0a4b3d;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .dept-card p {
+            color: #4c665c;
+            font-size: 0.9rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #e1efe9;
+            color: #0a5c4a;
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            margin-top: 12px;
+            font-weight: 500;
+        }
+
+        /* ===== 出诊专家 ===== */
+        .doctor-section {
+            padding: 50px 0;
+            background: #f5f7fa;
+        }
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .doctor-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border: 1px solid #e8f0ec;
+        }
+        .doctor-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #cde3da;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: #0a6e5c;
+            border: 3px solid #a9cec1;
+        }
+        .doctor-card h4 {
+            color: #0a3b30;
+            margin-bottom: 5px;
+        }
+        .doctor-card .title {
+            color: #0a6e5c;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .doctor-card p {
+            color: #5f6f68;
+            font-size: 0.9rem;
+        }
+
+        /* ===== 就诊指南 ===== */
+        .guide-section {
+            padding: 50px 0;
+            background: #fff;
+        }
+        .guide-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .step-item {
+            text-align: center;
+            background: #f6faf8;
+            border-radius: 16px;
+            padding: 20px 15px;
+            position: relative;
+        }
+        .step-num {
+            width: 40px;
+            height: 40px;
+            background: #0a6e5c;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .step-item h3 {
+            font-size: 1rem;
+            color: #123f33;
+            margin-bottom: 8px;
+        }
+        .step-item p {
+            font-size: 0.85rem;
+            color: #5c6f66;
+        }
+        .notice-box {
+            background: #f0f7f4;
+            border-radius: 12px;
+            padding: 20px 24px;
+            border-left: 5px solid #0a6e5c;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            padding: 50px 0;
+            background: #f5f7fa;
+        }
+        .faq-list {
+            max-width: 850px;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+            border-left: 4px solid #a9cec1;
+        }
+        .faq-item h3 {
+            font-size: 1.05rem;
+            color: #0a3b30;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .faq-item p {
+            color: #4e625a;
+            font-size: 0.95rem;
+        }
+
+        /* ===== 新闻动态 ===== */
+        .news-section {
+            padding: 50px 0;
+            background: #fff;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .news-card {
+            background: #fafcfb;
+            border-radius: 14px;
+            padding: 22px;
+            border: 1px solid #e6efeb;
+            transition: box-shadow 0.2s;
+        }
+        .news-card:hover {
+            box-shadow: 0 4px 18px rgba(0, 60, 40, 0.08);
+        }
+        .news-date {
+            color: #0a6e5c;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .news-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #1b3f34;
+        }
+        .news-card p {
+            color: #5a6b63;
+            font-size: 0.9rem;
+        }
+
+        /* ===== 页脚 ===== */
+        .site-footer {
+            background: #0a2e25;
+            color: #bcd4cb;
+            padding: 40px 0 20px;
+        }
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col ul li a {
+            color: #bcd4cb;
+            font-size: 0.9rem;
+        }
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #8faaa0;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 768px) {
+            .header-main {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-actions {
+                width: 100%;
+            }
+            .search-box {
+                width: 100%;
+            }
+            .search-box input {
+                flex: 1;
+                width: auto;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            .main-nav ul li a {
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+            }
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+            .hero .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .topbar .container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        @media (max-width: 480px) {
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶部信息条 -->
+<div class="topbar">
+    <div class="container">
+        <div class="topbar-links">
+            <a href="#">预约挂号</a>
+            <a href="#">报告查询</a>
+            <a href="#">体检中心</a>
+            <a href="#">联系我们</a>
+        </div>
+        <div class="topbar-info">
+            <span>医院总机：020-86800000（工作日8:00-17:30）</span>
+        </div>
+    </div>
+</div>
+
+<!-- 页眉 -->
+<header class="site-header">
+    <div class="container header-main">
+        <div class="logo-wrap">
+            <div class="logo-icon">中</div>
+            <div class="logo-text">
+                <h1>花都区中医院</h1>
+                <div class="sub">GUANGZHOU HUADU TCM HOSPITAL</div>
+            </div>
+        </div>
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" placeholder="搜索科室、专家、疾病...">
+                <button type="button">搜索</button>
+            </div>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">医院介绍</a></li>
+                <li><a href="#">科室导航</a></li>
+                <li><a href="#">专家团队</a></li>
+                <li><a href="#">就医指南</a></li>
+                <li><a href="#">中医特色</a></li>
+                <li><a href="#">健康科普</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">意见反馈</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- 主横幅 -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-text">
+            <span class="badge">🏥 二级甲等中医医院</span>
+            <h2>传承中医国粹<br>守护花都百姓健康</h2>
+            <p>花都区中医院是一所集医疗、教学、科研、预防、康复、保健于一体的综合性中医医院。坚持“突出中医特色，发挥专科优势”的办院方向，竭诚为广大群众提供优质、高效、便捷的中医药健康服务。</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">预约挂号</a>
+                <a href="#" class="btn btn-outline">了解医院</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- 中医传承展示区域 -->
+        </div>
+    </div>
+</section>
+
+<!-- 快捷服务 -->
+<section class="quick-services">
+    <div class="container">
+        <h2 class="section-title">快捷服务</h2>
+        <p class="section-desc">为方便您就诊，我们提供以下在线服务通道，减少排队等候时间。</p>
+        <div class="card-grid">
+            <div class="service-card">
+                <div class="service-icon">📅</div>
+                <h3>预约挂号</h3>
+                <p>支持科室及专家门诊预约，提前规划就诊时间</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>报告查询</h3>
+                <p>检验检查报告在线查询，手机即可查看结果</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💳</div>
+                <h3>门诊缴费</h3>
+                <p>诊间支付、扫码支付，避免窗口排队</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧾</div>
+                <h3>住院服务</h3>
+                <p>住院预交金、清单查询、出院结算等便捷服务</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 科室与特色 -->
+<section class="dept-section">
+    <div class="container">
+        <h2 class="section-title">重点科室与中医特色</h2>
+        <p class="section-desc">医院设有多个临床科室及中医特色专科，充分发挥中医药在防治常见病、慢性病及疑难杂症中的独特作用。</p>
+        <div class="dept-grid">
+            <div class="dept-card">
+                <h3>针灸推拿科</h3>
+                <p>运用传统针灸、推拿、正骨手法，结合现代康复技术，治疗颈肩腰腿痛、面瘫、中风后遗症等效果显著。</p>
+                <span class="tag">省级特色专科</span>
+            </div>
+            <div class="dept-card">
+                <h3>骨伤科</h3>
+                <p>以中医正骨、小夹板固定为特色，中西医结合治疗四肢骨折、关节脱位及运动损伤。</p>
+                <span class="tag">传统优势专科</span>
+            </div>
+            <div class="dept-card">
+                <h3>脾胃病科</h3>
+                <p>中医药治疗慢性胃炎、消化性溃疡、功能性消化不良、肠易激综合征等脾胃疾病。</p>
+                <span class="tag">中医经典病房</span>
+            </div>
+            <div class="dept-card">
+                <h3>妇科</h3>
+                <p>发挥中医妇科调经、助孕、安胎优势，治疗月经不调、盆腔炎、不孕症、围绝经期综合征。</p>
+                <span class="tag">中医特色门诊</span>
+            </div>
+            <div class="dept-card">
+                <h3>治未病中心</h3>
+                <p>提供中医体质辨识、健康调养咨询、膏方调理及亚健康状态干预等预防保健服务。</p>
+                <span class="tag">健康管理</span>
+            </div>
+            <div class="dept-card">
+                <h3>老年病科</h3>
+                <p>中西医结合诊治老年常见病、多发病，注重整体调理与功能康复，提高老年生活质量。</p>
+                <span class="tag">综合服务</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 专家团队 -->
+<section class="doctor-section">
+    <div class="container">
+        <h2 class="section-title">专家出诊信息</h2>
+        <p class="section-desc">以下为部分专家简介及出诊安排，具体出诊时间以当日挂号为准，建议提前预约。</p>
+        <div class="doctor-grid">
+            <div class="doctor-card">
+                <div class="doctor-avatar">👨‍⚕️</div>
+                <h4>陈国华</h4>
+                <div class="title">主任中医师 · 针灸科</div>
+                <p>从事针灸临床30余年，擅长治疗各类疼痛及神经系统疾病。</p>
+                <p style="margin-top:8px;font-size:0.8rem;">出诊：周一、三、五上午</p>
+            </div>
+            <div class="doctor-card">
+                <div class="doctor-avatar">👩‍⚕️</div>
+                <h4>李慧芳</h4>
+                <div class="title">副主任中医师 · 妇科</div>
+                <p>擅长中西医结合治疗月经病、不孕症及妇科炎症。</p>
+                <p style="margin-top:8px;font-size:0.8rem;">出诊：周二、四全天</p>
+            </div>
+            <div class="doctor-card">
+                <div class="doctor-avatar">👨‍⚕️</div>
+                <h4>刘志明</h4>
+                <div class="title">骨伤科主任 · 主任医师</div>
+                <p>中医正骨手法娴熟，对四肢骨折的微创治疗经验丰富。</p>
+                <p style="margin-top:8px;font-size:0.8rem;">出诊：周一、四上午</p>
+            </div>
+            <div class="doctor-card">
+                <div class="doctor-avatar">👩‍⚕️</div>
+                <h4>王雅静</h4>
+                <div class="title">主治中医师 · 治未病科</div>
+                <p>专注中医体质调理与亚健康状态的中医药干预。</p>
+                <p style="margin-top:8px;font-size:0.8rem;">出诊：周一至周五全天</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 就诊指南 -->
+<section class="guide-section">
+    <div class="container">
+        <h2 class="section-title">就诊流程指南</h2>
+        <p class="section-desc">第一次来院就诊别担心，我们为您梳理了清晰的就诊步骤。</p>
+        <div class="guide-steps">
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <h3>预约挂号</h3>
+                <p>通过公众号、电话或现场自助机选择科室及医生</p>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <h3>报到候诊</h3>
+                <p>就诊当日提前30分钟到院，凭有效证件或电子凭证报到</p>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <h3>医生接诊</h3>
+                <p>医生问诊、查体、开具检查及处方</p>
+            </div>
+            <div class="step-item">
+                <div class="step-num">4</div>
+                <h3>缴费检查</h3>
+                <p>通过窗口或手机完成缴费，前往相应科室检查</p>
+            </div>
+            <div class="step-item">
+                <div class="step-num">5</div>
+                <h3>取药离院</h3>
+                <p>中药房或西药房取药，遵医嘱用药并按时复诊</p>
+            </div>
+        </div>
+        <div class="notice-box">
+            <strong>温馨提示：</strong> 来院就诊请携带身份证及既往病历资料。中药代煎服务可为您提供便利，详情请咨询中药房窗口。
+        </div>
+    </div>
+</section>
+
+<!-- 新闻动态 -->
+<section class="news-section">
+    <div class="container">
+        <h2 class="section-title">医院动态与健康资讯</h2>
+        <p class="section-desc">了解医院最新公告、义诊活动及中医养生知识。</p>
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-date">2025年4月18日</div>
+                <h3>花都区中医院开展“中医药进社区”义诊活动</h3>
+                <p>本月医院组织多学科专家团队走进花都区多个社区，为居民提供免费健康咨询、中医体质辨识及针灸推拿体验，受到群众好评。</p>
+            </div>
+            <div class="news-card">
+                <div class="news-date">2025年4月10日</div>
+                <h3>春季养生正当时，中医专家支招“疏肝健脾”</h3>
+                <p>春季对应肝脏，中医认为此时养生应以疏肝理气、健脾祛湿为主。我院治未病中心专家为您讲解春季饮食调理要点。</p>
+            </div>
+            <div class="news-card">
+                <div class="news-date">2025年3月28日</div>
+                <h3>三伏天灸即将开始预约，冬病夏治正当时</h3>
+                <p>我院针灸推拿科将继续开展夏季三伏天灸疗法，对慢性呼吸系统疾病、过敏性鼻炎及虚寒性胃肠病有较好防治作用。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 常见问题 FAQ -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">常见问题解答</h2>
+        <p class="section-desc">关于就诊、医保、中药服务的常见疑问，我们为您集中解答。</p>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>如何办理挂号？支持哪些方式？</h3>
+                <p>您可以通过医院官方微信公众号进行线上预约挂号，也可以拨打预约电话或直接到门诊大厅自助挂号机办理。部分专家号源较为紧张，建议提前2-3天预约。</p>
+            </div>
+            <div class="faq-item">
+                <h3>花都区中医院可以使用医保吗？</h3>
+                <p>花都区中医院是广州市医保定点医疗机构，职工医保、居民医保及异地医保（需备案）均可按政策报销。中药饮片、针灸、推拿等中医诊疗项目均在医保报销范围内。</p>
+            </div>
+            <div class="faq-item">
+                <h3>医院提供中药代煎服务吗？</h3>
+                <p>是的，医院中药房提供代煎服务。您缴费后将处方交至中药房窗口，根据工作人员提示时间领取煎好的中药汤剂即可，一般当日可取。</p>
+            </div>
+            <div class="faq-item">
+                <h3>如何查询检验检查报告？</h3>
+                <p>手机端可登录医院公众号绑定就诊卡后在线查看报告，也可凭回执单在门诊大厅自助报告机上打印。纸质报告请妥善保管，方便复诊时医生查看。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-col">
+                <h4>医院信息</h4>
+                <ul>
+                    <li>医院地址：广州市花都区新华街迎宾大道87号</li>
+                    <li>咨询电话：020-86800000</li>
+                    <li>急救电话：120</li>
+                    <li>邮箱：hdzyy@126.com</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>就医服务</h4>
+                <ul>
+                    <li><a href="#">预约挂号</a></li>
+                    <li><a href="#">门诊缴费</a></li>
+                    <li><a href="#">报告查询</a></li>
+                    <li><a href="#">住院服务</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>院内导航</h4>
+                <ul>
+                    <li><a href="#">楼层分布</a></li>
+                    <li><a href="#">交通路线</a></li>
+                    <li><a href="#">科室分布</a></li>
+                    <li><a href="#">周边设施</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <ul>
+                    <li>微信公众号：花都区中医院</li>
+                    <li>视频号：花都中医</li>
+                    <li>门诊时间：周一至周日 8:00-12:00, 14:00-17:30</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 广州市花都区中医医院 版权所有 | 本站信息仅供参考，不能替代医生面诊，具体诊疗请遵医嘱。</p>
+            <p>粤ICP备00000000号-1</p>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+  </html>
